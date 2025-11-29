@@ -1,4 +1,16 @@
-<x-app-layout>
+<x-app-layout : breadcrumbs="[
+    [
+        'name' =>'ITMerida,
+        'href' => route('admin.dashboard'),
+    ],
+    [
+        'name' =>'DSC,
+        'href' => route('admin.dashboard'),
+    ],
+    [
+        'name' =>'H8,
+    ],
+    ]">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}

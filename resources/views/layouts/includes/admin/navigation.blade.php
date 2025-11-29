@@ -9,8 +9,8 @@
             </svg>
          </button>
         <a href= "/" class="flex ms-2 md:me-24">
-          <img src="{{ asset('images/Halo.png') }}" class="h-8 me-3" alt="FlowBite Logo" />
-          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Halo</span>
+          <img src="{{ asset('images/nails.jpg') }}" class="h-8 me-3" alt="FlowBite Logo" />
+          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Nails</span>
         </a>
       </div>
       <div class="flex items-center">
