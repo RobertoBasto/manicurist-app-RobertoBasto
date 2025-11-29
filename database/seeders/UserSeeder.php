@@ -15,13 +15,13 @@ class UserSeeder extends Seeder
     {
          //crear usuario de prueba para que se ejecuten migraciones
         User::factory()->create([
-            'name' => 'Roberto Basto',
-            'email' => 'roberto54@gmail.com',
+            'name' => 'Mariel',
+            'email' => 'mari54@gmail.com',
             'password'=> bcrypt('12345678'),
             'id_number'=>'123456789',
             'phone'=>'5555555555',
             'address'=>'Calle 123, Colonia 456',
 
-        ])->assignRole('Doctor');
+        ])->assignRole('Manicurista');
     }
 }
