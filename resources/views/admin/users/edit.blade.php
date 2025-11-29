@@ -4,19 +4,20 @@
         'href'=> route('admin.dashboard'),
     ],
     [
-        'name' => 'Roles',
-        'href'=> route('admin.roles.index'),
+        'name' => 'Users',
+        'href'=> route('admin.users.index'),
     ],
     ['name'=>'Editar'],
 ]">
 <x-wire-card>
-    <form action="{{route('admin.roles.update', $role)}}" method="POST">
+    <form action="{{route('admin.users.update', $user)}}" method="POST">
 
 @csrf
 @method('PUT')
-<x-wire-input label="Nombre" name="name" placeholder="Nombre de rol" value="{{old ('name', $role->name)}}">
+<x-wire-input label="Nombre" name="name" placeholder="Nombre de usuario" value="{{old ('name', $user->name)}}">
 
 </x-wire-input>
+
 <div class="flex justify-end mt-4">
  <x-wire-button type="submit" blue>Actualizar</x-wire-button>
 </div>

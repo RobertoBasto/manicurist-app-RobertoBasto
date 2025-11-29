@@ -18,10 +18,30 @@ class UserSeeder extends Seeder
             'name' => 'Mariel',
             'email' => 'mari54@gmail.com',
             'password'=> bcrypt('12345678'),
-            'id_number'=>'123456789',
+            'id_number'=>rand(100000000, 999999999),
             'phone'=>'5555555555',
             'address'=>'Calle 123, Colonia 456',
 
-        ])->assignRole('Manicurista');
+        ])->assignRole('Admin');
+
+         User::factory()->create([
+            'name' => 'Maria',
+            'email' => 'maria54@gmail.com',
+            'password'=> bcrypt('12345678'),
+            'id_number'=>rand(100000000, 999999999),
+            'phone'=>'5553455555',
+            'address'=>'Calle 120, Colonia 457',
+
+        ])->assignRole('Client');
+
+         User::factory()->create([
+            'name' => 'Samuel',
+            'email' => 'samuel54@gmail.com',
+            'password'=> bcrypt('12345678'),
+            'id_number'=>rand(100000000, 999999999),
+            'phone'=>'5555556555',
+            'address'=>'Calle 124, Colonia 455',
+
+        ])->assignRole('Boss');
     }
 }

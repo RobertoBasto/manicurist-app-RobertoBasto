@@ -57,3 +57,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## proyecto
+Manicurist-app-robertobasto.
+Interfaz de usuario para un negocio de manicura de uñas.
+
+Instrucciones para ejecutarlo de forma local:
+
+composer install
+
+Configurar .env:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=manicurist_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+php artisan migrate:fresh --seed
+Mariel: mari54@gmail.com  password:123456789

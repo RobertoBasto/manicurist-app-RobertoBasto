@@ -3,7 +3,7 @@
         'name'=>'Dashboard',
         'href'=> route('admin.dashboard'),
     ],
-    ['name' => 'Usuarios'],
+    ['name' => 'Users'],
 ]">
 <x-slot name="action">
 
