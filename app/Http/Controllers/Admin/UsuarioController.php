@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+
 
 class UsuarioController extends Controller
 {
@@ -26,17 +28,14 @@ class UsuarioController extends Controller
         'email' => 'required|email|unique:users,email',
         'password' => 'required|min:6',
         'phone' => 'required|string|max:20',
-        'address' => 'required|string|max:255',
     ]);
 
     // 2. Crear usuario
     $user = User::create([
         'name' => $request->name,
         'email' => $request->email,
-        'id_number' => rand(100000000, 999999999),
         'password' => bcrypt($request->password),
         'phone' => $request->phone,
-        'address' => $request->address,
     ]);
 
     // 3. Si vas a asignar rol (opcional)
@@ -57,24 +56,55 @@ class UsuarioController extends Controller
     }
 
     public function edit(User $user)
-    {
-            if($user->id <=3) {
-    //variable de un solo uso
-     session()->flash('swal', 
-     [
-    'icon' => 'error',
-    'title' => 'Error',
-    'text' => 'No puedes editar este usuario',
-    ]);
-    return redirect()->route('admin.users.index');
-    }
-        return view('admin.users.edit',compact('user'));
+{
+    if ($user->id <= 3) {
+        session()->flash('swal', [
+            'icon' => 'error',
+            'title' => 'Error',
+            'text' => 'No puedes editar este usuario',
+        ]);
+        return redirect()->route('admin.users.index');
     }
 
+    // ⭐ OBTENER ROLES PARA EL SELECT
+    $roles = Role::pluck('name', 'name');
+
+    return view('admin.users.edit', compact('user', 'roles'));
+}
+
+
     public function update(Request $request, User $user)
-    {
-        //
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email',
+        'phone' => 'required|string',
+    ]);
+
+    // Si envía password, actualizar, si no, conservar
+    $data = [
+        'name' => $request->name,
+        'email' => $request->email,
+        'phone' => $request->phone,
+    ];
+
+    if ($request->password) {
+        $data['password'] = bcrypt($request->password);
     }
+
+    $user->update($data);
+
+
+
+    session()->flash('swal', [
+        'icon' => 'success',
+        'title' => 'Usuario actualizado',
+        'text' => 'Los cambios se guardaron correctamente',
+    ]);
+
+    return redirect()->route('admin.users.index');
+}
+
 
     public function destroy(User $user)
      {

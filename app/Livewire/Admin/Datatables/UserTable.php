@@ -32,8 +32,6 @@ class UserTable extends DataTableComponent
                 ->sortable(),
             Column::make("Email", "email")
                 ->sortable(),
-            Column::make("Número de id", "id_number")
-                ->sortable(),
             Column::make("Teléfono", "phone")
                 ->sortable(),
             Column::make("Rol", "roles")

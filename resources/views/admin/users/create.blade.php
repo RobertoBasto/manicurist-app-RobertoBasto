@@ -47,14 +47,6 @@
             value="{{ old('phone') }}">
         </x-wire-input>
 
-        {{-- Dirección --}}
-        <x-wire-input 
-            label="Dirección"
-            name="address"
-            placeholder="Dirección del usuario"
-            value="{{ old('address') }}">
-        </x-wire-input>
-
         <div class="flex justify-end mt-4">
             <x-wire-button type="submit" blue>Guardar</x-wire-button>
         </div>
