@@ -66,7 +66,7 @@ class UsuarioController extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    // ⭐ OBTENER ROLES PARA EL SELECT
+    // OBTENER ROLES PARA EL SELECT
     $roles = Role::pluck('name', 'name');
 
     return view('admin.users.edit', compact('user', 'roles'));

@@ -4,8 +4,12 @@
         'href'=> route('admin.dashboard'),
     ],
 
-    ['name' => 'Profile'],
+    ['name' => 'Descripción de la tienda'],
 ]">
- Explora servicios de manicura diseñados para realzar la belleza de tus manos. 
- Encuentra desde estilos clásicos hasta diseños modernos, con profesionales especializados que garantizan calidad, higiene y una experiencia relajante.
+ Somos una tienda especializada en productos de manicura, dedicada a ofrecer todo lo necesario para crear uñas impecables, creativas y duraderas. 
+ Contamos con una amplia selección de esmaltes, geles, acrílicos, herramientas profesionales, decoración y equipos para nail art, 
+ seleccionados para garantizar calidad, seguridad y resultados de nivel salón.
+ Ya seas manicurista profesional o amante del cuidado de uñas, aquí encontrarás productos confiables, asesoría experta 
+ y las últimas tendencias para elevar tu trabajo y expresar tu estilo con cada diseño.
+
 </x-admin-layout>
