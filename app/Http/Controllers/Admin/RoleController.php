@@ -60,7 +60,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-            if($role->id <=4) {
+            if($role->id <=3) {
     //variable de un solo uso
      session()->flash('swal', 
      [
@@ -113,7 +113,7 @@ return redirect()->route('admin.roles.index', $role);
     public function destroy(Role $role)
     {
         //restringir la accion para los primeros 4 roles fijos
-         if($role->id <=4) {
+         if($role->id <=3) {
     //variable de un solo uso
      session()->flash('swal', 
      [

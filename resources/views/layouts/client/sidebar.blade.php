@@ -4,25 +4,8 @@
       [
          'name' => 'Dashboard',
          'icon' => 'fa-solid fa-gauge',
-         'href' => route('admin.dashboard'),
-         'active' => request()->routeIs('admin.dashboard'),
-      ],
-      [
-         'header' => 'Gestión',
-      ],
-
-      [
-         'name' => 'Roles y permisos',
-         'icon' => 'fa-solid fa-shield-halved',
-         'href' => route('admin.roles.index'),
-         'active' => request()->routeIs('admin.roles.*'),
-      ],
-      //copia para los usuarios
-      [
-         'name' => 'Usuarios',
-         'icon' => 'fa-solid fa-users',
-         'href' => route('admin.users.index'),
-         'active' => request()->routeIs('admin.users.*'),
+         'href' => route('client.dashboard'),
+         'active' => request()->routeIs('client.dashboard'),
       ],
         [
          'header' => 'Poductos',
@@ -30,8 +13,8 @@
        [
          'name' => 'Productos',
          'icon' => 'fa-solid fa-bag-shopping',
-         'href' => route('admin.products.index'),
-         'active' => request()->routeIs('admin.products.*'),
+         'href' => route('client.products.index'),
+         'active' => request()->routeIs('client.products.*'),
       ],
    ];
 @endphp    

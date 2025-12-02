@@ -7,7 +7,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 
-
 class UsuarioController extends Controller
 {
     public function index()
