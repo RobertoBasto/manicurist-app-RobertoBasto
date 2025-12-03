@@ -60,7 +60,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## proyecto
 Manicurist-app-robertobasto.
-Interfaz de usuario para un negocio de manicura de uñas.
+Interfaz de usuario para un negocio de vente de productos de manicura
 
 Instrucciones para ejecutarlo de forma local:
 
@@ -75,4 +75,4 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 php artisan migrate:fresh --seed
-Mariel: mari54@gmail.com  password:123456789
+Mariel: mari54@gmail.com  password:12345678
